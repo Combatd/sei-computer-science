@@ -11,8 +11,22 @@ function sumArrayOfNums(arr, index = 0, sum = 0) {
 
 console.log(sumArrayOfNums([2, 4, 5, 8])); // => 19
 
-function findMax() {
+function findMax(arr, index) {
     // This function returns the largest number in a given array.
+    let index = arr.length - 1;
+    let largestNum = 0;
+
+    // base case
+    if (index < 0) {
+        return largestNum;
+    }
+    
+    // check if element is larger than current largestNum
+    if(arr[index] > largestNum) {
+        largestNum = arr[index];
+    }
+    // recursive step
+    return (findMax(arr, index - 1));
 }
 
 function factorial() {
