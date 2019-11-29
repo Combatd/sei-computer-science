@@ -3,5 +3,7 @@ function sumArrayOfNums(arr, index = 0, sum = 0) {
     if (index === arr.length) {
         return sum;
     }
+    // step 3: action step - add number at current index of arr to sum
+    sum += arr[index];
 
 }
